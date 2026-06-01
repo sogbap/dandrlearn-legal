@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#5b7af8" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
     <title>Politique de confidentialité — D&amp;R Learn</title>
-    <meta name="description" content="Politique de confidentialité de l'application D&amp;R Learn. Données stockées localement, aucun tracking, RGPD compliant.">
+    <meta name="description" content="Politique de confidentialité de l'application D&amp;R Learn. Données chiffrées synchronisées via iCloud, aucun tracking publicitaire, RGPD compliant.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
@@ -28,7 +28,7 @@
     <main>
         <div class="container">
             <h1>Politique de confidentialité</h1>
-            <div class="doc-meta">D&amp;R Learn — Application iOS · Dernière mise à jour : 25 mai 2026</div>
+            <div class="doc-meta">D&amp;R Learn — Application iOS · Dernière mise à jour : 1 juin 2026</div>
 
             <h2>1. Introduction</h2>
             <p>D&amp;R Learn (ci-après « l'Application ») est développée et éditée par <strong>Raphaëlle Simonneau</strong>, entrepreneur individuel (SIRET 102 071 131 00019, ci-après « nous », « notre »). Cette politique de confidentialité explique comment nous collectons, utilisons, stockons et protégeons vos données personnelles lorsque vous utilisez notre application mobile disponible sur l'App Store d'Apple.</p>
@@ -94,10 +94,12 @@
             <h2>4. Stockage et sécurité</h2>
 
             <h3>4.1 Stockage local</h3>
-            <p>La totalité de vos données est stockée localement sur votre appareil via <strong>CoreData</strong>, une technologie Apple. Ces données ne quittent pas votre appareil sauf dans les cas décrits à la section 2.3.</p>
+            <p>La totalité de vos données est stockée localement sur votre appareil via <strong>CoreData</strong>, une technologie Apple. Ces données ne quittent pas votre appareil, sauf pour la synchronisation iCloud (section 4.2) et les traitements décrits à la section 2.3.</p>
 
             <h3>4.2 Synchronisation iCloud</h3>
-            <p>La synchronisation iCloud est <strong>désactivée dans la version actuelle (v1.0)</strong> de l'Application. Vos données restent exclusivement sur votre appareil. Une synchronisation multi-appareils pourra être proposée dans une version ultérieure et fera l'objet d'une mise à jour de cette politique.</p>
+            <p>D&amp;R Learn synchronise vos données (cours, flashcards, statistiques et préférences) entre vos appareils Apple via <strong>iCloud</strong>, en s'appuyant sur la base de données privée <strong>CloudKit</strong> associée au compte iCloud configuré sur votre appareil (Réglages → [votre nom] → iCloud).</p>
+            <p>Ces données synchronisées sont stockées dans <strong>votre espace iCloud privé</strong> : elles sont chiffrées en transit et au repos par Apple, et <strong>nous n'y avons aucun accès</strong> — nous ne pouvons ni les lire ni les exploiter. Ce traitement est régi par la politique de confidentialité d'Apple : <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.</p>
+            <p>Vous pouvez désactiver cette synchronisation à tout moment dans les réglages iCloud de votre appareil. Si vous n'utilisez pas iCloud, l'Application fonctionne normalement et vos données restent stockées localement sur votre appareil.</p>
 
             <h3>4.3 Serveur de traitement IA</h3>
             <p>Les requêtes envoyées à notre serveur sont transmises via <strong>HTTPS (chiffrement TLS 1.3)</strong>. Notre serveur effectue uniquement le traitement transitoire : aucune donnée n'est journalisée, stockée ou conservée après la réponse au client (durée de rétention : <strong>0 jour</strong>). Notre serveur est hébergé chez Fly.io — leur politique de confidentialité est disponible sur : <a href="https://fly.io/legal/privacy-policy/" target="_blank" rel="noopener">https://fly.io/legal/privacy-policy/</a></p>
@@ -114,6 +116,7 @@
                 <li><strong>Notre serveur de traitement IA (Fly.io / Cerebras) :</strong> contenu de documents importés et texte des flashcards pour le QCM, uniquement pour traitement transitoire, sans conservation</li>
                 <li><strong>Apple (paiements StoreKit 2) :</strong> gestion exclusive des transactions d'abonnement</li>
                 <li><strong>Apple (Sign in with Apple) :</strong> authentification optionnelle ; nous recevons uniquement un identifiant anonymisé que vous contrôlez</li>
+                <li><strong>Apple (iCloud / CloudKit) :</strong> vos données sont synchronisées dans votre espace iCloud privé, auquel nous n'avons pas accès ; ce traitement est régi par la politique de confidentialité d'Apple</li>
                 <li><strong>Obligation légale :</strong> si la loi nous y oblige, nous pourrions être contraints de divulguer certaines informations aux autorités compétentes</li>
             </ul>
 
