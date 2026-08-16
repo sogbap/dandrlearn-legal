@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#5b7af8" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
-    <title>Politique de confidentialité — D&amp;R Learn</title>
-    <meta name="description" content="Politique de confidentialité de l'application D&amp;R Learn. Données chiffrées synchronisées via iCloud, aucun tracking publicitaire, RGPD compliant.">
+    <title>Politique de confidentialité — Nuka</title>
+    <meta name="description" content="Politique de confidentialité de l'application Nuka (anciennement D&amp;R Learn). Serveur hébergé en France, aucun tracking publicitaire, conforme RGPD.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
@@ -15,8 +15,8 @@
     <header class="site">
         <div class="container">
             <a class="brand" href="./">
-                <span class="brand-mark"><img src="icon-small.png" alt="D&amp;R Learn icon"></span>
-                <span>D&amp;R Learn</span>
+                <span class="brand-mark"><img src="icon-small.png" alt="Icône Nuka"></span>
+                <span>Nuka</span>
             </a>
             <nav>
                 <a href="privacy.html" class="active">Confidentialité</a>
@@ -28,129 +28,173 @@
     <main>
         <div class="container">
             <h1>Politique de confidentialité</h1>
-            <div class="doc-meta">D&amp;R Learn — Application iOS · Dernière mise à jour : 1 juin 2026</div>
+            <div class="doc-meta">Nuka — Application iOS · Dernière mise à jour : 16 août 2026</div>
+
+            <div class="callout">
+                <p><strong>L'application a changé de nom.</strong> « D&amp;R Learn » est devenue <strong>Nuka</strong>. Il s'agit de la même application, éditée par la même personne : seul le nom affiché change. Vos données, votre progression et vos éventuels abonnements sont conservés à l'identique.</p>
+            </div>
 
             <h2>1. Introduction</h2>
-            <p>D&amp;R Learn (ci-après « l'Application ») est développée et éditée par <strong>Raphaëlle Simonneau</strong>, entrepreneur individuel (SIRET 102 071 131 00019, ci-après « nous », « notre »). Cette politique de confidentialité explique comment nous collectons, utilisons, stockons et protégeons vos données personnelles lorsque vous utilisez notre application mobile disponible sur l'App Store d'Apple.</p>
-            <p>En utilisant D&amp;R Learn, vous acceptez les pratiques décrites dans cette politique. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'Application.</p>
+            <p>Nuka (ci-après « l'Application ») est développée et éditée par <strong>Raphaëlle Simonneau</strong>, entrepreneur individuel (SIRET 102 071 131 00019, ci-après « nous », « notre »). Cette politique explique quelles données nous collectons, pourquoi, où elles sont stockées et combien de temps.</p>
+            <p>En utilisant Nuka, vous acceptez les pratiques décrites ici. Si vous ne les acceptez pas, veuillez ne pas utiliser l'Application.</p>
 
             <h2>2. Données collectées</h2>
 
-            <h3>2.1 Données créées par vous</h3>
-            <p>Les données suivantes sont créées par vous directement dans l'Application et stockées localement sur votre appareil :</p>
+            <h3>2.1 Données créées par vous, stockées sur votre appareil</h3>
             <ul>
-                <li>Cours et flashcards (titres, questions, réponses, images importées depuis votre galerie ou prises via l'appareil photo)</li>
+                <li>Cours et cartes de révision (titres, questions, réponses, images importées depuis votre galerie ou prises avec l'appareil photo)</li>
                 <li>Statistiques de révision (taux de réussite, nombre de révisions, séries consécutives)</li>
-                <li>Préférences et paramètres (thème, langue, objectif quotidien)</li>
-                <li>Nom d'utilisateur affiché dans le profil</li>
-                <li>Identifiant Apple anonymisé via « Sign in with Apple » (si vous choisissez de l'utiliser)</li>
+                <li>Préférences (thème, langue, objectif quotidien)</li>
+                <li>Prénom ou pseudonyme affiché dans votre profil</li>
+                <li>Identifiant Apple anonymisé via « Sign in with Apple », si vous choisissez de l'utiliser</li>
             </ul>
 
-            <h3>2.2 Données générées automatiquement</h3>
-            <p>L'Application génère automatiquement les données suivantes pour son fonctionnement :</p>
+            <h3>2.2 Données générées automatiquement sur votre appareil</h3>
             <ul>
-                <li>Progression d'apprentissage (XP, niveaux, badges)</li>
-                <li>Horodatages de révision (calculs SM-02 de répétition espacée)</li>
-                <li>Identifiants de session (UUID locaux, non transmis à des tiers)</li>
-                <li>Cache local des distracteurs QCM générés (évite de re-solliciter le serveur)</li>
+                <li>Progression d'apprentissage (XP, niveaux, succès)</li>
+                <li>Horodatages de révision (algorithme de répétition espacée SM-02)</li>
+                <li>Identifiant anonyme de l'appareil : un UUID aléatoire généré au premier lancement, conservé dans le trousseau iOS (Keychain). Il ne contient aucune information vous concernant et n'est jamais partagé avec des tiers.</li>
+                <li>Cache local des propositions de réponses (QCM) générées par l'IA</li>
             </ul>
 
-            <h3>2.3 Données transmises à des services tiers</h3>
-            <p>L'Application utilise un serveur sécurisé hébergé chez <strong>Fly.io (États-Unis)</strong> pour deux fonctionnalités nécessitant une connexion Internet :</p>
+            <h3>2.3 Fonctionnalités sociales — données stockées sur notre serveur</h3>
+            <p>Si vous utilisez les fonctionnalités entre amis (ajout d'amis, envoi de cours, classements, liens de partage), les données suivantes sont enregistrées sur <strong>notre serveur hébergé à Paris</strong> :</p>
             <ul>
-                <li><strong>Génération automatique de flashcards depuis des documents importés</strong> (fonctionnalité Premium) : le contenu textuel de vos documents est envoyé à notre serveur pour traitement par le modèle d'intelligence artificielle <em>gpt-oss-120b</em> de Cerebras. Les données ne sont pas conservées sur notre serveur après génération.</li>
-                <li><strong>Génération de questions à choix multiples (distracteurs QCM)</strong> : lors des sessions de révision en mode QCM, le contenu de vos flashcards (recto et verso) est envoyé à notre serveur pour générer des propositions de réponses alternatives. Ce traitement est transitoire — les données ne sont pas conservées.</li>
+                <li>Votre identifiant anonyme (UUID) et votre <strong>code d'ami</strong> public à 6 caractères</li>
+                <li>Le <strong>prénom ou pseudonyme</strong> que vous avez saisi, ainsi que l'emoji de votre profil</li>
+                <li>Votre XP total et hebdomadaire, et votre niveau — nécessaires aux classements entre amis</li>
+                <li>Votre langue d'application, pour vous envoyer des notifications dans la bonne langue</li>
+                <li>Votre <strong>liste d'amis</strong> et les demandes en attente</li>
+                <li>Les <strong>cours que vous envoyez ou recevez</strong> d'un ami, ainsi que les cours publiés via un lien de partage : leur contenu complet (titre, cartes, fiche de révision) transite et est stocké temporairement le temps que le destinataire l'accepte ou que le lien expire</li>
+                <li>Les blocages et signalements que vous effectuez, afin de faire respecter les règles d'usage</li>
             </ul>
+            <p>Ces fonctionnalités sont <strong>facultatives</strong>. Si vous n'ajoutez aucun ami et ne partagez aucun cours, aucune de ces données n'est créée. L'Application reste pleinement utilisable sans elles.</p>
+
+            <h3>2.4 Notifications</h3>
+            <p>Si vous autorisez les notifications, Apple attribue à l'Application un <strong>jeton de notification (APNs)</strong>. Nous le conservons sur notre serveur pour pouvoir vous prévenir lorsqu'un ami vous envoie une demande ou un cours. Ce jeton est propre à cette Application et à cet appareil, et ne permet pas de vous identifier ailleurs. Les rappels de révision quotidiens, eux, sont programmés <strong>localement</strong> sur votre appareil et ne transitent par aucun serveur.</p>
+
+            <h3>2.5 Génération par intelligence artificielle</h3>
+            <p>Deux fonctionnalités nécessitent un traitement sur notre serveur :</p>
+            <ul>
+                <li><strong>Création de cartes depuis un document</strong> : le contenu textuel du document que vous importez est envoyé à notre serveur, puis au modèle <em>gpt-oss-120b</em> de <strong>Cerebras</strong> pour en extraire des cartes et une fiche de révision.</li>
+                <li><strong>Propositions de réponses (QCM)</strong> : le recto et le verso de vos cartes sont envoyés pour générer des réponses alternatives plausibles.</li>
+            </ul>
+            <p><strong>Le contenu de vos documents et de vos cartes n'est pas conservé après traitement.</strong> Nous enregistrons en revanche, à des fins de suivi technique et de maîtrise des coûts, des <strong>métadonnées sans contenu</strong> : date, type de traitement, nombre de cartes produites, volume traité, coût estimé, matière, langue et version de l'Application.</p>
 
             <div class="callout">
-                <p><strong>Transfert de données hors Union Européenne :</strong> nos serveurs (Fly.io) et le service Cerebras sont hébergés aux États-Unis. En utilisant les fonctionnalités d'IA, vous consentez expressément à ce transfert. Les données ne sont jamais conservées après traitement et sont transmises via une connexion chiffrée HTTPS/TLS.</p>
+                <p><strong>Hébergement et transferts.</strong> Notre serveur est hébergé par <strong>Fly.io dans sa région de Paris (France)</strong> : vos données sociales ne quittent pas l'Union européenne. En revanche, le service <strong>Cerebras est établi aux États-Unis</strong> : en utilisant les fonctions de génération par IA, vous consentez au transfert du contenu concerné vers ce pays, le temps du traitement. Tous les échanges sont chiffrés (HTTPS/TLS).</p>
             </div>
 
-            <p>Ces traitements sont effectués via le service Cerebras — leur politique : <a href="https://cerebras.ai/privacy" target="_blank" rel="noopener">https://cerebras.ai/privacy</a></p>
-            <p>Aucune autre donnée personnelle n'est transmise à des services tiers.</p>
+            <p>Politique de Cerebras : <a href="https://cerebras.ai/privacy" target="_blank" rel="noopener">cerebras.ai/privacy</a> — politique de Fly.io : <a href="https://fly.io/legal/privacy-policy/" target="_blank" rel="noopener">fly.io/legal/privacy-policy</a></p>
 
-            <h3>2.4 Ce que nous ne collectons PAS</h3>
+            <h3>2.6 Mesure d'audience</h3>
+            <p>Pour comprendre quelles fonctionnalités sont utilisées et corriger ce qui ne fonctionne pas, l'Application transmet des événements d'usage à deux prestataires, tous deux hébergés dans l'Union européenne :</p>
             <ul>
-                <li>Nous ne collectons pas de données de géolocalisation</li>
-                <li>Nous n'accédons pas à vos contacts, appels ou SMS</li>
-                <li>Nous n'utilisons pas de cookies de tracking publicitaire</li>
-                <li>Nous ne vendons pas vos données à des tiers</li>
-                <li>Nous ne créons pas de profil publicitaire vous concernant</li>
-                <li>Nous n'utilisons pas de tracking inter-applications (aucune demande ATT)</li>
-                <li>Nous ne collectons aucun identifiant publicitaire (IDFA)</li>
+                <li><strong>Aptabase</strong> (UE) — <a href="https://aptabase.com/legal/privacy" target="_blank" rel="noopener">politique</a></li>
+                <li><strong>PostHog</strong> (cloud UE) — <a href="https://posthog.com/privacy" target="_blank" rel="noopener">politique</a></li>
+            </ul>
+            <p>Ce qui est transmis : le <strong>nom de l'action</strong> (par exemple « session terminée », « cours téléchargé »), des propriétés générales sans contenu (mode de révision, tranche de nombre de cartes), le modèle d'appareil, la version d'iOS, la version de l'Application et votre langue.</p>
+            <p>Ces événements sont associés à votre <strong>code d'ami</strong>, afin de pouvoir relier des actions séparées dans le temps et comprendre les parcours d'usage. Ces données sont donc <strong>pseudonymisées et non anonymes</strong> : elles constituent des données personnelles au sens du RGPD. Nous ne transmettons jamais le contenu de vos cours, de vos cartes ou de vos documents.</p>
+            <p>Vous pouvez désactiver entièrement cette mesure d'audience dans les réglages de l'Application.</p>
+
+            <h3>2.7 Ce que nous ne collectons pas</h3>
+            <ul>
+                <li>Aucune donnée de géolocalisation</li>
+                <li>Aucun accès à vos contacts, appels ou messages</li>
+                <li>Aucun identifiant publicitaire (IDFA), aucun cookie publicitaire</li>
+                <li>Aucun profil publicitaire, aucune revente de données</li>
+                <li>Aucun suivi entre applications ou sites tiers (aucune demande ATT)</li>
+                <li>Aucune donnée bancaire — les paiements sont gérés exclusivement par Apple</li>
             </ul>
 
             <h2>3. Utilisation des données</h2>
-            <p>Vos données sont utilisées exclusivement aux fins suivantes :</p>
             <ul>
-                <li>Permettre le fonctionnement de l'Application (affichage des cours, sessions de révision)</li>
-                <li>Calculer et afficher vos statistiques de progression</li>
+                <li>Faire fonctionner l'Application (cours, sessions de révision, statistiques)</li>
                 <li>Personnaliser votre expérience (thème, langue, objectif quotidien)</li>
-                <li>Générer des propositions de réponses (QCM) pendant les sessions de révision</li>
-                <li>Générer des flashcards depuis vos documents (fonctionnalité Premium)</li>
-                <li>Améliorer l'Application et corriger les anomalies via les retours diagnostics anonymes d'Apple (si vous avez activé le partage des diagnostics dans iOS)</li>
+                <li>Générer des cartes et des propositions de réponses par IA</li>
+                <li>Permettre les fonctionnalités entre amis, si vous les utilisez</li>
+                <li>Vous envoyer les rappels et notifications que vous avez acceptés</li>
+                <li>Mesurer l'usage des fonctionnalités pour améliorer l'Application et corriger les anomalies</li>
+                <li>Faire respecter les règles d'usage (blocages, signalements)</li>
             </ul>
 
-            <h2>4. Stockage et sécurité</h2>
+            <h2>4. Stockage, hébergement et durées de conservation</h2>
 
-            <h3>4.1 Stockage local</h3>
-            <p>La totalité de vos données est stockée localement sur votre appareil via <strong>CoreData</strong>, une technologie Apple. Ces données ne quittent pas votre appareil, sauf pour la synchronisation iCloud (section 4.2) et les traitements décrits à la section 2.3.</p>
+            <h3>4.1 Sur votre appareil</h3>
+            <p>Vos cours, cartes, statistiques et préférences sont stockés sur votre appareil via <strong>CoreData</strong>. Ils y restent aussi longtemps que l'Application est installée.</p>
 
             <h3>4.2 Synchronisation iCloud</h3>
-            <p>D&amp;R Learn synchronise vos données (cours, flashcards, statistiques et préférences) entre vos appareils Apple via <strong>iCloud</strong>, en s'appuyant sur la base de données privée <strong>CloudKit</strong> associée au compte iCloud configuré sur votre appareil (Réglages → [votre nom] → iCloud).</p>
-            <p>Ces données synchronisées sont stockées dans <strong>votre espace iCloud privé</strong> : elles sont chiffrées en transit et au repos par Apple, et <strong>nous n'y avons aucun accès</strong> — nous ne pouvons ni les lire ni les exploiter. Ce traitement est régi par la politique de confidentialité d'Apple : <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.</p>
-            <p>Vous pouvez désactiver cette synchronisation à tout moment dans les réglages iCloud de votre appareil. Si vous n'utilisez pas iCloud, l'Application fonctionne normalement et vos données restent stockées localement sur votre appareil.</p>
+            <p>Nuka synchronise vos cours, cartes, statistiques et préférences entre vos appareils Apple via <strong>iCloud</strong>, dans la base privée <strong>CloudKit</strong> liée à votre compte iCloud.</p>
+            <p>Ces données sont stockées dans <strong>votre espace iCloud privé</strong>, chiffrées en transit et au repos par Apple. <strong>Nous n'y avons aucun accès.</strong> Ce traitement relève de la politique d'Apple : <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>. Vous pouvez désactiver la synchronisation à tout moment dans les réglages iCloud de votre appareil ; l'Application continue alors de fonctionner en local.</p>
 
-            <h3>4.3 Serveur de traitement IA</h3>
-            <p>Les requêtes envoyées à notre serveur sont transmises via <strong>HTTPS (chiffrement TLS 1.3)</strong>. Notre serveur effectue uniquement le traitement transitoire : aucune donnée n'est journalisée, stockée ou conservée après la réponse au client (durée de rétention : <strong>0 jour</strong>). Notre serveur est hébergé chez Fly.io — leur politique de confidentialité est disponible sur : <a href="https://fly.io/legal/privacy-policy/" target="_blank" rel="noopener">https://fly.io/legal/privacy-policy/</a></p>
+            <h3>4.3 Sur notre serveur</h3>
+            <p>Notre serveur est hébergé par <strong>Fly.io, région de Paris (France)</strong>. Les échanges sont chiffrés en <strong>TLS</strong> et chaque requête est authentifiée.</p>
 
-            <h3>4.4 Cache local des résultats IA</h3>
-            <p>Pour optimiser les performances et limiter les requêtes réseau, les propositions QCM (distracteurs) générées par l'IA sont mises en cache localement dans votre base CoreData. Ce cache reste sur votre appareil et ne quitte jamais celui-ci.</p>
+            <h3>4.4 Durées de conservation</h3>
+            <ul>
+                <li><strong>Profil social</strong> (identifiant, code d'ami, pseudonyme, XP, niveau, jeton de notification, langue) : conservé tant que vous utilisez les fonctionnalités sociales, et jusqu'à votre demande de suppression</li>
+                <li><strong>Liste d'amis</strong> : conservée jusqu'à suppression de l'ami concerné ou de votre profil</li>
+                <li><strong>Cours envoyés à un ami</strong> : le contenu est effacé dès que le destinataire répond ; la trace de l'échange est supprimée automatiquement au bout de <strong>30 jours</strong></li>
+                <li><strong>Liens de partage</strong> : expirent automatiquement au bout de <strong>30 jours</strong> ou après 100 téléchargements, et sont révocables à tout moment depuis l'Application</li>
+                <li><strong>Contenu envoyé à l'IA</strong> : non conservé après traitement</li>
+                <li><strong>Métadonnées techniques de génération</strong> (sans contenu) : conservées à des fins de suivi des coûts et de qualité de service</li>
+                <li><strong>Signalements</strong> : conservés le temps nécessaire au traitement et à la prévention des récidives</li>
+            </ul>
 
-            <h3>4.5 Abonnements et paiements</h3>
-            <p>Les paiements et abonnements sont entièrement gérés par <strong>Apple via StoreKit 2</strong>. Nous n'avons jamais accès à vos informations bancaires ou de paiement. Les transactions sont soumises à la politique de confidentialité d'Apple.</p>
+            <h3>4.5 Cache local des résultats IA</h3>
+            <p>Les propositions de réponses (QCM) générées sont mises en cache sur votre appareil pour éviter des requêtes réseau inutiles. Ce cache ne quitte jamais l'appareil et peut être vidé depuis le menu d'un cours.</p>
+
+            <h3>4.6 Abonnements et paiements</h3>
+            <p>Les abonnements et achats sont intégralement gérés par <strong>Apple (StoreKit 2)</strong>. Nous ne recevons ni ne stockons aucune information bancaire.</p>
 
             <h2>5. Partage des données</h2>
-            <p>Nous ne partageons pas vos données personnelles avec des tiers, à l'exception des cas suivants :</p>
+            <p>Nous ne vendons aucune donnée. Des données sont partagées uniquement dans les cas suivants :</p>
             <ul>
-                <li><strong>Notre serveur de traitement IA (Fly.io / Cerebras) :</strong> contenu de documents importés et texte des flashcards pour le QCM, uniquement pour traitement transitoire, sans conservation</li>
-                <li><strong>Apple (paiements StoreKit 2) :</strong> gestion exclusive des transactions d'abonnement</li>
-                <li><strong>Apple (Sign in with Apple) :</strong> authentification optionnelle ; nous recevons uniquement un identifiant anonymisé que vous contrôlez</li>
-                <li><strong>Apple (iCloud / CloudKit) :</strong> vos données sont synchronisées dans votre espace iCloud privé, auquel nous n'avons pas accès ; ce traitement est régi par la politique de confidentialité d'Apple</li>
-                <li><strong>Obligation légale :</strong> si la loi nous y oblige, nous pourrions être contraints de divulguer certaines informations aux autorités compétentes</li>
+                <li><strong>Avec vos amis, à votre initiative :</strong> lorsque vous ajoutez un ami, il voit votre pseudonyme, votre emoji, votre niveau et votre XP. Lorsque vous lui envoyez un cours ou publiez un lien de partage, il en reçoit le contenu complet.</li>
+                <li><strong>Cerebras (États-Unis) :</strong> contenu des documents importés et texte des cartes, pour traitement transitoire par l'IA</li>
+                <li><strong>Fly.io (France) :</strong> hébergement de notre serveur</li>
+                <li><strong>Aptabase et PostHog (UE) :</strong> événements d'usage pseudonymisés, sans contenu</li>
+                <li><strong>Apple :</strong> paiements (StoreKit), synchronisation (iCloud), authentification facultative (Sign in with Apple), notifications (APNs)</li>
+                <li><strong>Obligation légale :</strong> si la loi nous y contraint</li>
             </ul>
 
             <h2>6. Vos droits (RGPD)</h2>
-            <p>Conformément au Règlement Général sur la Protection des Données (RGPD) — Règlement (UE) 2016/679 — vous disposez des droits suivants :</p>
+            <p>Conformément au Règlement (UE) 2016/679, vous disposez des droits suivants :</p>
             <ul>
-                <li><strong>Droit d'accès :</strong> vous pouvez demander une copie de vos données</li>
-                <li><strong>Droit de rectification :</strong> vous pouvez corriger ou mettre à jour vos données directement dans l'Application</li>
-                <li><strong>Droit à l'effacement (« droit à l'oubli ») :</strong> vous pouvez supprimer toutes vos données via <span class="mono">Profil → Compte → Supprimer toutes les données</span>. Cette suppression est immédiate et irréversible.</li>
-                <li><strong>Droit à la portabilité :</strong> vos données sont stockées localement et accessibles à tout moment</li>
-                <li><strong>Droit à la limitation du traitement :</strong> vous pouvez désactiver les fonctionnalités d'IA en n'utilisant pas l'import de documents et le mode QCM</li>
-                <li><strong>Droit d'opposition :</strong> vous pouvez désinstaller l'Application à tout moment pour cesser tout traitement</li>
-                <li><strong>Droit de retirer votre consentement :</strong> à tout moment, sans impact sur la légalité des traitements antérieurs</li>
+                <li><strong>Accès :</strong> obtenir une copie des données vous concernant</li>
+                <li><strong>Rectification :</strong> corriger votre pseudonyme et vos préférences directement dans l'Application</li>
+                <li><strong>Effacement :</strong> voir ci-dessous</li>
+                <li><strong>Portabilité :</strong> vos cours sont exportables depuis l'Application ; vos autres données peuvent être demandées par e-mail</li>
+                <li><strong>Limitation :</strong> vous pouvez désactiver la mesure d'audience et les notifications dans les réglages, et n'utiliser ni l'IA ni les fonctionnalités sociales</li>
+                <li><strong>Opposition</strong> et <strong>retrait du consentement</strong> à tout moment, sans effet rétroactif sur les traitements déjà effectués</li>
             </ul>
-            <p>Pour exercer ces droits ou pour toute question, contactez-nous à : <a href="mailto:contact_dandrlearn@icloud.com"><strong>contact_dandrlearn@icloud.com</strong></a></p>
-            <p>Vous disposez également du droit d'introduire une réclamation auprès de la <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong> : <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">www.cnil.fr/fr/plaintes</a>.</p>
 
-            <h2>7. Données des mineurs</h2>
-            <p>D&amp;R Learn est destinée à un public de 4 ans et plus selon la classification App Store. L'Application ne collecte pas de données personnelles directement identifiables et ne contient aucun mécanisme de communication avec des tiers ni aucun contenu généré par d'autres utilisateurs.</p>
-            <p>Conformément au <em>Children's Online Privacy Protection Act</em> (COPPA, États-Unis), nous ne collectons pas sciemment de données personnelles d'enfants de moins de 13 ans. Si vous êtes parent ou tuteur légal et avez des questions, contactez-nous à <a href="mailto:contact_dandrlearn@icloud.com">contact_dandrlearn@icloud.com</a>.</p>
+            <div class="callout">
+                <p><strong>Comment supprimer vos données.</strong><br>
+                <strong>Sur votre appareil :</strong> <span class="mono">Profil → Compte → Supprimer toutes les données</span> efface immédiatement et définitivement vos cours, cartes, statistiques et identifiants locaux.<br>
+                <strong>Sur notre serveur :</strong> les données liées aux fonctionnalités sociales (profil, code d'ami, liste d'amis, échanges) ne sont pas encore supprimables depuis l'Application. Écrivez-nous à <a href="mailto:contact_dandrlearn@icloud.com">contact_dandrlearn@icloud.com</a> en indiquant votre code d'ami : nous procédons à leur suppression sous 30 jours. Une suppression directement depuis l'Application est en cours de développement.</p>
+            </div>
 
-            <h2>8. Tracking publicitaire (ATT)</h2>
-            <p>D&amp;R Learn <strong>n'utilise aucun tracking publicitaire</strong>. Nous ne demandons pas l'autorisation de suivi (App Tracking Transparency) car nous n'effectuons aucun tracking inter-applications. L'Application ne contient aucune publicité dans sa version actuelle (v1.0).</p>
+            <p>Pour exercer ces droits : <a href="mailto:contact_dandrlearn@icloud.com"><strong>contact_dandrlearn@icloud.com</strong></a></p>
+            <p>Vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> : <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">cnil.fr/fr/plaintes</a>.</p>
+
+            <h2>7. Mineurs et contenus partagés entre utilisateurs</h2>
+            <p>Nuka s'adresse à des collégiens, lycéens et étudiants. Les fonctionnalités sociales permettent à des utilisateurs d'échanger des <strong>contenus qu'ils ont eux-mêmes créés</strong> (cours et cartes de révision). Nous ne modérons pas ces contenus a priori, mais l'Application permet à tout moment de <strong>bloquer un utilisateur</strong> et de <strong>signaler un contenu</strong> ; tout signalement est examiné et peut entraîner la suppression du contenu et l'exclusion de son auteur.</p>
+            <p>L'ajout d'un ami suppose l'échange volontaire d'un code d'ami ou d'un lien d'invitation : aucun annuaire n'est consultable et personne ne peut vous trouver sans que vous lui ayez communiqué ce code.</p>
+            <p>Nous ne collectons pas sciemment de données personnelles d'enfants de moins de 13 ans (<em>COPPA</em>). Si vous êtes parent ou tuteur et souhaitez que les données d'un mineur soient supprimées, écrivez-nous à <a href="mailto:contact_dandrlearn@icloud.com">contact_dandrlearn@icloud.com</a>.</p>
+
+            <h2>8. Publicité et suivi</h2>
+            <p>Nuka ne contient <strong>aucune publicité</strong> et n'effectue <strong>aucun suivi publicitaire</strong>. Nous ne croisons vos données avec celles d'aucune application ou site tiers, et ne les transmettons à aucun courtier en données : aucune autorisation de suivi (App Tracking Transparency) ne vous est donc demandée.</p>
+            <p>Précision utile : nos mesures d'usage sont rattachées à un identifiant qui vous est propre (votre code d'ami). À ce titre, elles sont déclarées auprès d'Apple comme « liées à l'identité », sans pour autant relever du suivi publicitaire décrit ci-dessus.</p>
 
             <h2>9. Modifications de cette politique</h2>
-            <p>Nous pouvons mettre à jour cette politique de confidentialité. En cas de modification substantielle, nous vous en informerons via l'Application au moins 30 jours avant l'entrée en vigueur des nouvelles conditions. La date de dernière mise à jour est indiquée en haut de ce document. L'utilisation continue de l'Application après modification vaut acceptation des nouvelles conditions.</p>
+            <p>Cette politique peut évoluer. En cas de modification substantielle, nous vous en informerons dans l'Application au moins 30 jours avant son entrée en vigueur. La date de dernière mise à jour figure en haut de ce document.</p>
 
             <h2>10. Contact</h2>
-            <p>Pour toute question relative à cette politique de confidentialité :</p>
             <ul>
-                <li>Email : <a href="mailto:contact_dandrlearn@icloud.com"><strong>contact_dandrlearn@icloud.com</strong></a></li>
-                <li>Application : <strong>D&amp;R Learn, disponible sur l'App Store Apple</strong></li>
-                <li>Éditeur : <strong>Raphaëlle Simonneau</strong></li>
-                <li>Forme juridique : Entrepreneur individuel</li>
+                <li>E-mail : <a href="mailto:contact_dandrlearn@icloud.com"><strong>contact_dandrlearn@icloud.com</strong></a></li>
+                <li>Application : <strong>Nuka</strong> (anciennement D&amp;R Learn), sur l'App Store</li>
+                <li>Éditeur : <strong>Raphaëlle Simonneau</strong>, entrepreneur individuel</li>
                 <li>SIRET : 102 071 131 00019</li>
             </ul>
         </div>
@@ -163,7 +207,7 @@
                 <a href="terms.html">Conditions</a>
                 <a href="mailto:contact_dandrlearn@icloud.com">Contact</a>
             </div>
-            <div>© 2026 Raphaëlle Simonneau · D&amp;R Learn · SIRET 102 071 131 00019</div>
+            <div>© 2026 Raphaëlle Simonneau · Nuka · SIRET 102 071 131 00019</div>
         </div>
     </footer>
 </body>
